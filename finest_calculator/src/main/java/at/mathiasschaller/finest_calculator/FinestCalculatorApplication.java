@@ -2,6 +2,7 @@ package at.mathiasschaller.finest_calculator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 import java.applet.AppletContext;
 import java.util.Scanner;
@@ -10,7 +11,7 @@ import java.util.Scanner;
 public class FinestCalculatorApplication {
 
 	public static void main(String[] args) {
-		AppletContext ctx = (AppletContext) SpringApplication.run(FinestCalculatorApplication.class,args);
+		ApplicationContext ctx = SpringApplication.run(FinestCalculatorApplication.class,args);
 		Scanner scan = new Scanner(System.in);
 
 		Calculator calculator = new Calculator();
