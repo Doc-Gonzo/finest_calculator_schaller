@@ -3,11 +3,27 @@ package at.mathiasschaller.finest_calculator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.applet.AppletContext;
+import java.util.Scanner;
+
 @SpringBootApplication
 public class FinestCalculatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinestCalculatorApplication.class, args);
+		AppletContext ctx = (AppletContext) SpringApplication.run(FinestCalculatorApplication.class,args);
+		Scanner scan = new Scanner(System.in);
+
+		Calculator calculator = new Calculator();
+		System.out.println("The World's Finest Calculator!");
+		System.out.println("Please enter number:");
+		double number1 = scan.nextDouble();
+
+		System.out.println("Please enter another number:");
+		double number2 = scan.nextDouble();
+		double ergebnis = Calculator.calculateSumOfProduct(number1,number2);
+		System.out.println(" Summe dividiert durch das Produkt der beiden Zahlen: " + ergebnis);
+
+
 	}
 
 }
