@@ -22,7 +22,7 @@ public class FinestCalculatorApplication {
 		double number1 = scan.nextDouble();
 		System.out.println("Please enter another number:");
 		double number2 = scan.nextDouble();
-		double ergebnis = Calculator.calculateSumOfProduct(number1,number2);
+		double ergebnis = calculator.calculateSumOfProduct(number1,number2);
 		System.out.println(" Summe dividiert durch das Produkt der beiden Zahlen: " + ergebnis);
 	}
 
